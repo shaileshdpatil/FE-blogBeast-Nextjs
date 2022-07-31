@@ -1,6 +1,13 @@
-//mixins imports
+//variables imports
+@import "variables";
 
 //modules import
 @import "./modules/home-page";
 
 //elements imports
+@import "elements/animated";
+@import "elements/featured-blogs";
+@import "elements/header_container";
+
+
+//variables
