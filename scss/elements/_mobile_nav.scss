@@ -1,0 +1,14 @@
+.mobile_navigator{
+  display: none;
+  @media (max-width: map-get($grid-breakpoints, "sm")) {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    z-index: 3;
+    .MuiBottomNavigation-root{
+      width: 100%;
+    }
+  }
+}

@@ -2,9 +2,16 @@ import React, {useEffect} from 'react';
 import logo from "../../assets/images/logo-v1.png";
 import Link from "next/link";
 import {useRouter} from "next/router";
+import _ from 'lodash';
 
 const CustomNavbar = () => {
     const router = useRouter();
+
+    const getActiveClass = (param) => {
+        if (_.includes(param, router.pathname)) {
+            return 'active';
+        }
+    }
 
     useEffect(() => {
         const className = document.querySelector('.header-area').classList;
@@ -38,14 +45,16 @@ const CustomNavbar = () => {
                                 <li><a href="#"><i className="fa fa-facebook"/></a></li>
                                 <li><a href="#"><i className="fa fa-behance"/></a></li>
                                 <li><a href="#"><i className="fa fa-twitter"/></a></li>
-                                <li><a href="#"><i className="fa fa-dribbble"/></a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <header className="header-area header-sticky wow slideInDown" data-wow-duration="0.75s"
-                    data-wow-delay="0s">
+            <header
+                className="header-area header-sticky wow slideInDown"
+                data-wow-duration="0.75s"
+                data-wow-delay="0s"
+            >
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
@@ -53,24 +62,33 @@ const CustomNavbar = () => {
                                 <a className="logo">
                                     <img src={logo.src} alt="logo"/>
                                 </a>
-                                <ul className="nav">
+                                <ul className={`nav`}>
                                     <li className="scroll-to-section">
-                                        <Link href="/" className="active">Home</Link>
+                                        <Link href="/">
+                                            <a className={getActiveClass(['/'])}>Home</a>
+                                        </Link>
                                     </li>
                                     <li className="scroll-to-section">
-                                        <Link href="/blogs">About</Link>
+                                        <Link href="/blog">
+                                            <a className={getActiveClass(['/blog'])}>Blog</a>
+                                        </Link>
                                     </li>
-                                    <li className="scroll-to-section"><a href="#">Services</a></li>
-                                    <li className="scroll-to-section"><a href="#">Projects</a></li>
-                                    <li className="scroll-to-section"><a href="#">Blog</a></li>
-                                    <li className="scroll-to-section"><a href="#">Contact</a></li>
                                     <li className="scroll-to-section">
-                                        <div className="border-first-button"><a href="#">Free Quote</a></div>
+                                        <Link href="/category">
+                                            <a className={getActiveClass(['/category'])}>Discover</a>
+                                        </Link>
+                                    </li>
+                                    <li className="scroll-to-section">
+                                        <Link href="/about">
+                                            <a className={getActiveClass(['/about'])}>About</a>
+                                        </Link>
+                                    </li>
+                                    <li className="scroll-to-section">
+                                        <div className="border-first-button">
+                                            <a href="#">Contact</a>
+                                        </div>
                                     </li>
                                 </ul>
-                                <a className='menu-trigger'>
-                                    <span>Menu</span>
-                                </a>
                             </nav>
                         </div>
                     </div>

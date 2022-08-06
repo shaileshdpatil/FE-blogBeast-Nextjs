@@ -11,7 +11,7 @@ class AboutUsPage extends Component {
                             <div className="col-lg-12">
                                 <div className="row">
                                     <div className="col-lg-6">
-                                        <div className="about-left-image  wow fadeInLeft" data-wow-duration="1s"
+                                        <div className="about-left-image wow fadeInLeft" data-wow-duration="1s"
                                              data-wow-delay="0.5s">
                                             <img src={aboutdec.src} alt=""/>
                                         </div>

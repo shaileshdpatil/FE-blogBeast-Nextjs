@@ -2,12 +2,14 @@
 @import "variables";
 
 //modules import
-@import "./modules/home-page";
+@import "modules/home-page";
+@import "modules/featured-blogs";
+@import "modules/about-us";
+@import "modules/categorys";
 
 //elements imports
 @import "elements/animated";
-@import "elements/featured-blogs";
 @import "elements/header_container";
-
-
-//variables
+@import "elements/floating-button";
+@import "elements/mobile_nav";
+@import "elements/container-fluid";

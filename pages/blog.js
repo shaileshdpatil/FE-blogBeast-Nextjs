@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import FeaturedBlogs from "../components/FeaturedBlogs";
+import FeaturedBlogs from "../screens/BlogsPage";
 
-class Blogs extends Component {
+class Blog extends Component {
     render() {
         return (
             <FeaturedBlogs/>
@@ -9,4 +9,4 @@ class Blogs extends Component {
     }
 }
 
-export default Blogs;
+export default Blog;

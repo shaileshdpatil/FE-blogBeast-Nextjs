@@ -1,1 +1,12 @@
 $primary_color: #6415ff;
+
+// Breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  ssm: 400px,
+  sm: 576px,
+  md: 768px,
+  lg: 993px,
+  xl: 1360px,
+  xxl:1400px,
+) !default;

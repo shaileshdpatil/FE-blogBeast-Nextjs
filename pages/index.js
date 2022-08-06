@@ -1,15 +1,7 @@
-import Head from "next/head";
 import HomePage from "../screens/HomePage";
 
 function Home() {
-    return (
-        <>
-            <HomePage/>
-
-            <footer>
-            </footer>
-        </>
-    );
+    return <HomePage/>;
 }
 
 export default Home

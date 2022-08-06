@@ -3,7 +3,6 @@
   padding-top: 130px;
   &:before {
     content: '';
-    //background-image: url(../images/blog-left-dec.jpg);
     background-repeat: no-repeat;
     position: absolute;
     left: 0;
@@ -65,19 +64,21 @@
         p {
           margin-bottom: 30px;
         }
-        span.author {
-          font-size: 15px;
-          color: #2a2a2a;
+        .created_by{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          .author {
+            font-size: 15px;
+            color: #2a2a2a;
 
-          img {
-            max-width: 56px;
-            border-radius: 50%;
-            margin-right: 15px;
+            img {
+              width: 36px;
+              border-radius: 50%;
+              margin-right: 15px;
+            }
           }
-        }
-        .border-first-button {
-          display: inline-block;
-          float: right;
         }
       }
     }
@@ -85,6 +86,10 @@
 
   .blog-posts {
     margin-left: 30px;
+    @media (max-width: map-get($grid-breakpoints, "sm")) {
+      margin: 0;
+      padding: 20px;
+    }
   }
 
   .post-item {
@@ -97,6 +102,7 @@
 
   .post-item {
     .thumb {
+      cursor: pointer;
       display: inline-block;
       float: left;
       margin-right: 30px;
@@ -107,17 +113,16 @@
       }
     }
     .right-content {
-      padding-top: 20px;
-
-      span.category {
+      .category {
         font-size: 15px;
         color: #fff;
         padding: 8px 12px;
         background-color: #726ae3;
         border-radius: 18px;
         display: inline-block;
+        cursor: pointer;
       }
-      span.date {
+      .date {
         font-size: 15px;
         color: #afafaf;
         text-align: right;
